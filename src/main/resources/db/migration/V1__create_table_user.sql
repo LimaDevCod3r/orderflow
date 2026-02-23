@@ -1,0 +1,13 @@
+CREATE TABLE users
+(
+    id         BINARY(16) NOT NULL PRIMARY KEY,
+    email      VARCHAR(255) NOT NULL,
+    password   VARCHAR(255) NOT NULL,
+    role       VARCHAR(50)  NOT NULL,
+    is_active  BOOLEAN      NOT NULL DEFAULT TRUE,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    last_login TIMESTAMP NULL,
+
+    CONSTRAINT uk_users_email UNIQUE (email)
+);
