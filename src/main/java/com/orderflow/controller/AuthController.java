@@ -2,7 +2,6 @@ package com.orderflow.controller;
 
 import com.orderflow.dto.request.CreateUserRequestDTO;
 import com.orderflow.dto.response.AuthResponse;
-import com.orderflow.mapper.UserMapper;
 import com.orderflow.services.AuthService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
